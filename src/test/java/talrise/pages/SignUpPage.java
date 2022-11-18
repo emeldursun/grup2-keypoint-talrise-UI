@@ -64,7 +64,24 @@ public class SignUpPage extends CommonPageElements {
         CommonSteps.waitFor(5);
         currentURL = driver.getCurrentUrl();
         System.out.println(currentURL);
-        Assert.assertTrue("We are in choose role page",currentURL.contains("chooseRole"));
+        Assert.assertTrue("We are on choose role page",currentURL.contains("chooseRole"));
+
+
+        }
+
+        public void signUp(String firstName, String lastName, String linkedin, String email, String password, String con_pass, String gdpr){
+
+            firstNameBox.sendKeys(firstName);
+            lastNameBox.sendKeys(lastName);
+            linkedInBox.sendKeys(linkedin);
+            emailBox.sendKeys(email);
+            passswordBox.sendKeys(password);
+            confirmPasswordBox.sendKeys(con_pass);
+            if (gdpr.equals("true")){
+                GDPRcheckbox.click();
+            }
+            signUpcreateAccountButton.click();
+
 
 
         }

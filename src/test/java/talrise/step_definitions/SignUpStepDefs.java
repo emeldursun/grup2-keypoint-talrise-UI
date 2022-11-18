@@ -46,4 +46,17 @@ public class SignUpStepDefs extends CommonSteps {
 
 
     }
+
+    @When("the user leaves blank user information {string} {string}{string}{string}{string}{string}{string}")
+    public void theUserLeavesBlankUserInformation(String firstName, String lastName, String linkedIn, String email, String password, String con_pass, String gdpr) {
+
+        signUpPage.signUp(firstName, lastName, linkedIn, email, password, con_pass,gdpr);
+
+    }
+
+    @When("the user enters invalid {string} inputs")
+    public void theUserEntersInvalidInputs(String email) {
+
+
+    }
 }
