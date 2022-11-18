@@ -34,19 +34,3 @@ Feature: SignUp
 
 
 
-  Scenario Outline: User should not be allowed to sign up with invalid email inputs
-
-    When the user enters invalid "<email>" inputs
-    Then correct error message should be displayed
-
-    Examples:
-    |email              |
-    |without @          |
-    |one letter only    |
-    |special characters |
-    |upper limit check  |
-    |numeric            |
-    |alphanumeric       |
-    |emoji              |
-
-
